@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledContainer = styled.div``;
+const StyledContainer = styled.div`
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+`;
 const StyledCard = styled.div``;
 const StyledContent = styled.div``;
 

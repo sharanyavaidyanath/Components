@@ -4,9 +4,14 @@ import styled from "styled-components";
 import CardComponent from "./card";
 
 const Container = styled.div`
-  background-color: red;
-  height: 200px;
-  width: 200px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
 `;
 
 const App: React.FC = () => {
