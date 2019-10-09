@@ -7,7 +7,10 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const StyledCard = styled.div``;
+const StyledCard = styled.div`
+  position: relative;
+  cursor: pointer;
+`;
 const StyledContent = styled.div``;
 
 const CardComponent = () => {
