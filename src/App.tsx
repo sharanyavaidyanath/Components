@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import styled from "styled-components";
+import CardComponent from "./card";
 
 const Container = styled.div`
   background-color: red;
@@ -10,7 +10,11 @@ const Container = styled.div`
 `;
 
 const App: React.FC = () => {
-  return <Container className="App"></Container>;
+  return (
+    <Container className="App">
+      <CardComponent />
+    </Container>
+  );
 };
 
 export default App;
