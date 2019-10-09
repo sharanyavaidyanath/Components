@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import designImage from "../images/design.jpeg";
+import codeImage from "../images/code.jpg";
+import launchImage from "../images/launch.jpeg";
 
 const StyledContainer = styled.div`
   width: 1000px;
@@ -10,74 +13,110 @@ const StyledContainer = styled.div`
 const StyledCard = styled.div`
   position: relative;
   cursor: pointer;
+  & :hover {
+    transform: translateY(0);
+  }
 `;
-const StyledContent = styled.div``;
+const StyledFaceOne = styled.div`
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  transform: translateY(100px);
+`;
+const StyledFaceTwo = styled.div`
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+`;
+const StyledImage = styled.img`
+  height: 150px;
+  width: 200px;
+`;
+const StyledContent = styled.div`
+  opacity: 0.2s;
+  transition: 0.5s;
+`;
+const StyledHeader = styled.h3`
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+`;
 
 const CardComponent = () => {
   return (
     <StyledContainer>
       <StyledCard>
-        <div className="face face1">
-          {" "}
+        <StyledFaceOne className="face face1">
           <StyledContent>
-            <img src="https://picsum.photos/200/300"></img>
-            <h3>Design</h3>
+            <StyledImage src={designImage}></StyledImage>
+            <StyledHeader>Design</StyledHeader>
           </StyledContent>
-        </div>
-        <div className="face face2">
-          {" "}
+        </StyledFaceOne>
+        <StyledFaceTwo className="face face2">
           <StyledContent>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit,
+              <br /> sed do eiusmod tempor incididun
             </p>
+            <br />
             <a href="#">Read more</a>
           </StyledContent>
-        </div>
+        </StyledFaceTwo>
       </StyledCard>
       <StyledCard>
-        <div className="face face1">
-          {" "}
+        <StyledFaceOne className="face face1">
           <StyledContent>
-            <img src="https://picsum.photos/200/300"></img>
-            <h3>Code</h3>
+            <StyledImage src={codeImage}></StyledImage>
+            <StyledHeader>Code</StyledHeader>
           </StyledContent>
-        </div>
-        <div className="face face2">
-          {" "}
+        </StyledFaceOne>
+        <StyledFaceTwo className="face face2">
           <StyledContent>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit,
+              <br /> sed do eiusmod tempor incididun
             </p>
+            <br />
             <a href="#">Read more</a>
           </StyledContent>
-        </div>
+        </StyledFaceTwo>
       </StyledCard>
       <StyledCard>
-        <div className="face face1">
-          {" "}
+        <StyledFaceOne className="face face1">
           <StyledContent>
-            <img src="https://picsum.photos/200/300"></img>
-            <h3>Launch</h3>
+            <StyledImage src={launchImage}></StyledImage>
+            <StyledHeader>Launch</StyledHeader>
           </StyledContent>
-        </div>
-        <div className="face face2">
-          {" "}
+        </StyledFaceOne>
+        <StyledFaceTwo className="face face2">
           <StyledContent>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit,
+              <br /> sed do eiusmod tempor incididun
             </p>
+            <br />
             <a href="#">Read more</a>
           </StyledContent>
-        </div>
+        </StyledFaceTwo>
       </StyledCard>
     </StyledContainer>
   );
