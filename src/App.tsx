@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import styled from "styled-components";
 import CardComponent from "./card";
+import FlipCard from "./flipcard";
 
 const Container = styled.div`
   margin: 0;
@@ -17,7 +18,7 @@ const Container = styled.div`
 const App: React.FC = () => {
   return (
     <Container className="App">
-      <CardComponent />
+      <FlipCard />
     </Container>
   );
 };
