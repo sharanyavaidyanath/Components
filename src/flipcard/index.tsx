@@ -38,7 +38,7 @@ const Front = styled.div`
   flex-direction: column;
   justify-content: center;
   backface-visibility: hidden;
-  background: green;
+  background: burlywood;
 `;
 const Back = styled.div`
   position: absolute;
@@ -49,20 +49,29 @@ const Back = styled.div`
   flex-direction: column;
   justify-content: center;
   backface-visibility: hidden;
-  background: yellow;
+  background: burlywood;
   transform: rotateY(180deg);
 `;
 
+const StyledImage = styled.img`
+  height: 200px;
+  width: 150px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px 1px #333;
+`;
 const FlipCard = () => {
   return (
     <CardContainer>
       <StyledFlipCard className="flip-card">
         <StyledFlipCardContent className="flip-card-inner">
           <Front className="front">
-            <img src={front}></img>
+            <StyledImage src={front}></StyledImage>
+            <p>FRONT</p>
           </Front>
           <Back className="back">
-            <img src={back}></img>
+            <StyledImage src={back}></StyledImage>
+            <p>BACK</p>
           </Back>
         </StyledFlipCardContent>
       </StyledFlipCard>
