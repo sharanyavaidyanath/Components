@@ -10,14 +10,9 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const StyledCard = styled.div`
-  position: relative;
-  cursor: pointer;
-  & :hover {
-    transform: translateY(0);
-  }
-`;
+
 const StyledFaceOne = styled.div`
+  grid-area: 1/-1/1/-1;
   width: 300px;
   height: 200px;
   transition: 0.5s;
@@ -26,9 +21,20 @@ const StyledFaceOne = styled.div`
   display: flex;
   justify-content: center;
   z-index: 1;
-  transform: translateY(100px);
+  transform: translateY(0px);
 `;
+
+const StyledCard = styled.div`
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  &:hover ${StyledFaceOne} {
+    transform: translateY(-200px);
+  }
+`;
+
 const StyledFaceTwo = styled.div`
+  grid-area: 1/-1/1/-1;
   width: 300px;
   height: 200px;
   transition: 0.5s;
@@ -40,7 +46,6 @@ const StyledFaceTwo = styled.div`
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-100px);
 `;
 const StyledImage = styled.img`
   height: 150px;
@@ -57,6 +62,24 @@ const StyledHeader = styled.h3`
   text-align: center;
   font-size: 1.5em;
 `;
+const StyledText = styled.p`
+  margin: 0;
+  padding: 0;
+`;
+
+const StyledAnchor = styled.a`
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+  &:hover {
+    background: #333;
+    color: #fff;
+  }
+`;
 
 const CardComponent = () => {
   return (
@@ -70,13 +93,13 @@ const CardComponent = () => {
         </StyledFaceOne>
         <StyledFaceTwo className="face face2">
           <StyledContent>
-            <p>
+            <StyledText>
               Lorem ipsum dolor sit amet, <br />
               consectetur adipiscing elit,
               <br /> sed do eiusmod tempor incididun
-            </p>
+            </StyledText>
             <br />
-            <a href="#">Read more</a>
+            <StyledAnchor href="#">Read more</StyledAnchor>
           </StyledContent>
         </StyledFaceTwo>
       </StyledCard>
@@ -89,13 +112,13 @@ const CardComponent = () => {
         </StyledFaceOne>
         <StyledFaceTwo className="face face2">
           <StyledContent>
-            <p>
+            <StyledText>
               Lorem ipsum dolor sit amet, <br />
               consectetur adipiscing elit,
               <br /> sed do eiusmod tempor incididun
-            </p>
+            </StyledText>
             <br />
-            <a href="#">Read more</a>
+            <StyledAnchor href="#">Read more</StyledAnchor>
           </StyledContent>
         </StyledFaceTwo>
       </StyledCard>
@@ -108,13 +131,13 @@ const CardComponent = () => {
         </StyledFaceOne>
         <StyledFaceTwo className="face face2">
           <StyledContent>
-            <p>
+            <StyledText>
               Lorem ipsum dolor sit amet, <br />
               consectetur adipiscing elit,
               <br /> sed do eiusmod tempor incididun
-            </p>
+            </StyledText>
             <br />
-            <a href="#">Read more</a>
+            <StyledAnchor href="#">Read more</StyledAnchor>
           </StyledContent>
         </StyledFaceTwo>
       </StyledCard>
