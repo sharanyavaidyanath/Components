@@ -3,6 +3,7 @@ import "./App.css";
 import styled from "styled-components";
 import CardComponent from "./card";
 import FlipCard from "./flipcard";
+import TorchEffect from "./torcheffect";
 
 const Container = styled.div`
   margin: 0;
@@ -18,7 +19,7 @@ const Container = styled.div`
 const App: React.FC = () => {
   return (
     <Container className="App">
-      <FlipCard />
+      <TorchEffect />
     </Container>
   );
 };
