@@ -1,33 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import flash from "../images/flash.svg";
 
 const Container = styled.div`
   height: 80vh;
-  width: 100vw;
+  width: 60vw;
+  background-color: burlywood;
 `;
 
 const StyledImage = styled.svg`
   height: 200px;
   width: auto;
-  margin-top: 500px;
-  margin-right: 1200px;
+  position: absolute;
+  top: 630px;
+  left: 150px;
   transform: rotate(10deg);
   z-index: 10;
-`;
-
-const Flash = styled.img`
-  position: absolute;
-  top: 421px;
-  left: 162px;
-  transform: rotate(15deg);
-  width: 310px;
 `;
 
 const TorchEffect = () => {
   return (
     <Container>
-      <Flash src={flash}></Flash>
       <StyledImage
         width="370px"
         height="370px"
@@ -95,6 +87,7 @@ const TorchEffect = () => {
               cy="237.5"
               r="12.5"
             ></circle>
+
             <animateTransform
               href="#Oval"
               attributeName="transform"
@@ -108,7 +101,6 @@ const TorchEffect = () => {
           </g>
         </g>
       </StyledImage>
-      // eslint-disable-next-line react/no-unescaped-entities
     </Container>
   );
 };
