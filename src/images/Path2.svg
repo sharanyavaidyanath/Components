@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="398px" height="357px" viewBox="0 0 398 357" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="14.3407062%" y1="91.8655926%" x2="78.6099155%" y2="4.02716247%" id="linearGradient-1">
+            <stop stop-color="#FBFBFB" offset="0%"></stop>
+            <stop stop-color="#F5F5F5" offset="6.05797521%"></stop>
+            <stop stop-color="#F0F0F0" offset="12.1914891%"></stop>
+            <stop stop-color="#FFFFFF" offset="20.1987714%"></stop>
+            <stop stop-color="#F8F6D3" offset="25.1660205%"></stop>
+            <stop stop-color="#F4EE89" offset="28.9732836%"></stop>
+            <stop stop-color="#F2BE5B" offset="62.363352%"></stop>
+            <stop stop-color="#FB5B19" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.35">
+        <g id="Artboard" transform="translate(-131.000000, -222.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(4.000000, 183.000000)">
+                <path d="M157.616638,375.672133 L246.51779,57.705393 C355.010704,36.2035464 424.993624,35.19846 456.46655,54.6901338 C487.939477,74.1818076 510.290105,132.370499 523.518435,229.256209 L246.51779,426.003611 L157.616638,375.672133 Z" id="Path-2" transform="translate(340.567536, 233.395920) rotate(15.000000) translate(-340.567536, -233.395920) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
