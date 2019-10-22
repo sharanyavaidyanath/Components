@@ -33,6 +33,7 @@ const Video = styled.video`
   width: 580px;
   grid-area: video;
   border-radius: 10px;
+  outline: none;
 `;
 //# endregion
 
