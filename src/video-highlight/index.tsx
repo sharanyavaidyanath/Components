@@ -24,7 +24,7 @@ const Highlight = styled.div`
   width: 300px;
   grid-area: highlight;
   color: white;
-  font-family: "Modak", cursive;
+  font-family: "Modak";
   align-self: center;
   font-size: 35px;
 `;
@@ -42,10 +42,12 @@ const VideoHighlight: React.FC<VideoHighlightProps> = ({
   videoOnLeft,
 }: VideoHighlightProps) => {
   return (
-    <Container alternateLayout={Boolean(videoOnLeft)}>
-      <Highlight>{highlight}</Highlight>
-      <Video src={video} controls />
-    </Container>
+    <div>
+      <Container alternateLayout={Boolean(videoOnLeft)}>
+        <Highlight>{highlight}</Highlight>
+        <Video src={video} controls />
+      </Container>
+    </div>
   );
 };
 

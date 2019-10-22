@@ -22,19 +22,30 @@ const ContainerWithHorizontalSpace = styled.div`
   row-gap: 80px;
 `;
 
+const Heading = styled.h1`
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 40px;
+  width: 300px;
+  margin: auto;
+`;
 const App: React.FC = () => {
   return (
-    <Container className="App">
-      <ContainerWithHorizontalSpace>
-        {VIDEO_HIGHLIGHT_LIST.map((element, index) => (
-          <VideoHighlight
-            {...element}
-            key={index}
-            videoOnLeft={index % 2 === 1}
-          />
-        ))}
-      </ContainerWithHorizontalSpace>
-    </Container>
+    <div>
+      <Heading>CARTOON NETWORK</Heading>
+
+      <Container className="App">
+        <ContainerWithHorizontalSpace>
+          {VIDEO_HIGHLIGHT_LIST.map((element, index) => (
+            <VideoHighlight
+              {...element}
+              key={index}
+              videoOnLeft={index % 2 === 1}
+            />
+          ))}
+        </ContainerWithHorizontalSpace>
+      </Container>
+    </div>
   );
 };
 
