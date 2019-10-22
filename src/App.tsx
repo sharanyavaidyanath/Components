@@ -10,7 +10,7 @@ import { VIDEO_HIGHLIGHT_LIST } from "./utils/constants";
 const Container = styled.div`
   margin: 0;
   padding: 0;
-  background: black;
+  background-color: lightseagreen;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +23,11 @@ const ContainerWithHorizontalSpace = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-family: "Courier New", Courier, monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   font-size: 40px;
   width: 300px;
+  color: lightcoral;
   margin: auto;
 `;
 const App: React.FC = () => {
