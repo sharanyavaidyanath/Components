@@ -10,7 +10,7 @@ import { VIDEO_HIGHLIGHT_LIST } from "./utils/constants";
 const Container = styled.div`
   margin: 0;
   padding: 0;
-  background: #333;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
