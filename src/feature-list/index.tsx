@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import checkedImage from "../../images/checked.png";
+import checkedImage from "../images/checked.png";
 import { FONT_SIZES } from "../utils/constants";
 import { capitalize } from "../utils/helpers";
 import { StyledComponentProps } from "../utils/types";
@@ -17,7 +17,7 @@ const StyledFeatureList = styled.ul`
 `;
 
 const StyledFeature = styled.li`
-  color: #717171;
+  color: seagreen;
   font-weight: 500;
   margin-bottom: 20px;
 
