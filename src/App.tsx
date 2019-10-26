@@ -6,15 +6,18 @@ import FlipCard from "./flipcard";
 import TorchEffect from "./torcheffect";
 import VideoHighlight from "./video-highlight";
 import { VIDEO_HIGHLIGHT_LIST } from "./utils/constants";
+import PriceTierList from "./price-tiers";
+import { PLANS_DATA } from "../src/utils/constants";
 
 const Container = styled.div`
-  margin: 0;
+  margin: 20px;
   padding: 0;
   background-color: lightseagreen;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
+  border-radius: 10px;
 `;
 
 const ContainerWithHorizontalSpace = styled.div`
@@ -22,28 +25,12 @@ const ContainerWithHorizontalSpace = styled.div`
   row-gap: 80px;
 `;
 
-const Heading = styled.h1`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  font-size: 40px;
-  width: 300px;
-  color: lightcoral;
-  margin: auto;
-`;
 const App: React.FC = () => {
   return (
     <div>
-      <Heading>CARTOON NETWORK</Heading>
-
       <Container className="App">
         <ContainerWithHorizontalSpace>
-          {VIDEO_HIGHLIGHT_LIST.map((element, index) => (
-            <VideoHighlight
-              {...element}
-              key={index}
-              videoOnLeft={index % 2 === 1}
-            />
-          ))}
+          <PriceTierList plans={PLANS_DATA} />
         </ContainerWithHorizontalSpace>
       </Container>
     </div>
