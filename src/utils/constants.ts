@@ -51,21 +51,6 @@ export const PLANS_DATA = [
       "Priority feature requests",
     ],
   },
-  {
-    planName: "Work",
-    monthlyPrice: 49,
-    yearlyPrice: 500,
-    features: [
-      "Up to 10 devices",
-      "Windows, Linux, macOS",
-      "All features",
-      "All future updates",
-      "Email support",
-      "License management",
-      "Priority support",
-      "Priority feature requests",
-    ],
-  },
 ];
 
 export const PLAN_DURATIONS = {

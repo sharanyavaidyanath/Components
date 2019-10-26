@@ -15,8 +15,8 @@ export interface SubscriptionHeaderProps {
 const Container = styled.div<{ showAnnual?: boolean }>`
   background: radial-gradient(
     circle at 12.3% 19.3%,
-    rgba(58, 50, 125, 0.93) 0%,
-    rgb(102, 91, 185) 100.2%
+    rgba(69, 153, 102, 0.93) 0%,
+    rgb(69, 84, 153) 100.2%
   );
   height: 180px;
   width: 300px;

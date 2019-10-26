@@ -21,11 +21,13 @@ const Container = styled.div<ContainerProps>`
   width: 100%;
   column-gap: 32px;
   row-gap: 32px;
+  margin-bottom: 20px;
 `;
 
 const StyledToggler = styled(Toggler)`
   grid-area: 1/1/-1/-1;
   justify-self: center;
+  margin: 10px;
 `;
 
 // #endregion

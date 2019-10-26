@@ -30,12 +30,13 @@ const StyledSubscriptionHeader = styled(SubscriptionHeader)`
 
 const StyledButton = styled(Button)`
   margin: 10px 30px;
-  background-color: rgb(101, 90, 182);
+  background-color: skyblue;
   font-size: ${FONT_SIZES.NORMAL};
   font-weight: 400;
   font-size: ${FONT_SIZES.NORMAL};
   &:hover {
-    background-color: rgb(87, 76, 171);
+    background-color: lightblue;
+    color: blue;
   }
 `;
 
