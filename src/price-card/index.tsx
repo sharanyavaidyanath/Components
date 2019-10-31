@@ -30,13 +30,14 @@ const StyledSubscriptionHeader = styled(SubscriptionHeader)`
 
 const StyledButton = styled(Button)`
   margin: 10px 30px;
-  background-color: skyblue;
-  font-size: ${FONT_SIZES.NORMAL};
+  background-color: teal;
+  font-size: ${FONT_SIZES.BIGGER};
   font-weight: 400;
-  font-size: ${FONT_SIZES.NORMAL};
+  transition: 1s ease;
+  border-radius: 30px;
   &:hover {
-    background-color: lightblue;
-    color: blue;
+    background-color: lightsteelblue;
+    color: seagreen;
   }
 `;
 
@@ -74,7 +75,7 @@ const PriceCard = ({
     <Container index={index}>
       <StyledSubscriptionHeader {...subscriptionHeaderProps} />
       <StyledFeatureList features={features} />
-      <StyledButton text="Purchase" />
+      <StyledButton text="BUY NOW!" />
     </Container>
   );
 };

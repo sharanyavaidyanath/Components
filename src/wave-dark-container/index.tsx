@@ -15,7 +15,11 @@ const Container = styled.div`
 const StyledDarkContainer = styled.div`
   display: grid;
   width: 100%;
-  background: radial-gradient(circle at 10% 20%, rgb(26, 20, 74) 0%, rgb(59, 52, 120) 100.2%);
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(26, 20, 74) 0%,
+    rgb(59, 52, 120) 100.2%
+  );
   padding-top: 80px;
   padding-bottom: 60px;
   align-items: center;
