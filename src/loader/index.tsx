@@ -23,6 +23,7 @@ const BaseBox = styled.div`
 `;
 
 const Box1 = styled(BaseBox)`
+  border: 5px solid teal;
   animation-name: anime1;
   @keyframes anime1 {
     0% {
@@ -82,6 +83,7 @@ const Box1 = styled(BaseBox)`
   }
 `;
 const Box2 = styled(BaseBox)`
+  border: 5px solid yellowgreen;
   animation-name: anime2;
   @keyframes anime2 {
     0% {
@@ -220,16 +222,28 @@ const Text = styled.h2`
     }
   }
 `;
-
+const SecondLoader = styled.div``;
+const FirstLoader = styled.div`
+  width: 200px;
+  height: 200px;
+  position: relative;
+`;
 const Loader = () => {
   return (
     <div>
-      <Text>LOADING...</Text>
-      <Container>
-        <Box1></Box1>
-        <Box2></Box2>
-        <Box3></Box3>
-      </Container>
+      <FirstLoader>
+        <span className="atomic a1"></span>
+        <span className="atomic a2"></span>
+        <span className="atomic a3"></span>
+      </FirstLoader>
+      <SecondLoader>
+        <Text>LOADING...</Text>
+        <Container>
+          <Box1></Box1>
+          <Box2></Box2>
+          <Box3></Box3>
+        </Container>
+      </SecondLoader>
     </div>
   );
 };

@@ -14,12 +14,11 @@ import Loader from "./loader";
 const Container = styled.div`
   background-image: url("/images/CN.jpg");
   background: black;
-  display: flex;
   width: 100vw;
   height: 100vh;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-content: space-around;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
 `;
