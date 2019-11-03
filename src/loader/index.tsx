@@ -236,9 +236,21 @@ const Oval = styled.span`
   border-radius: 50%;
   background: #fff;
 `;
-const OvalOne = styled(Oval)``;
-const OvalTwo = styled(Oval)``;
-const OvalThree = styled(Oval)``;
+const OvalOne = styled(Oval)`
+  top: 50px;
+  left: 90px;
+  animation: a1 2.5s ease infinite;
+`;
+const OvalTwo = styled(Oval)`
+  top: 120px;
+  left: 40px;
+  animation: a2 2.5s ease infinite;
+`;
+const OvalThree = styled(Oval)`
+  top: 120px;
+  left: 138px;
+  animation: a3 2.5s ease infinite;
+`;
 
 const Loader = () => {
   return (
