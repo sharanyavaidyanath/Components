@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
+const Outer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+`;
 const Container = styled.div`
   width: 112px;
   height: 112px;
@@ -231,12 +236,12 @@ const FirstLoader = styled.div`
 const Oval = styled.span`
   width: 20px;
   height: 20px;
-  border: 1px solid #fff;
+  border: 1px solid blue;
   position: absolute;
   border-radius: 50%;
-  background: #fff;
 `;
 const OvalOne = styled(Oval)`
+  background: yellowgreen;
   top: 50px;
   left: 90px;
   animation: OvalOneAni 2.5s ease infinite;
@@ -257,6 +262,7 @@ const OvalOne = styled(Oval)`
   }
 `;
 const OvalTwo = styled(Oval)`
+  background: lightseagreen;
   top: 120px;
   left: 40px;
   animation: OvalTwoAni 2.5s ease infinite;
@@ -277,6 +283,7 @@ const OvalTwo = styled(Oval)`
   }
 `;
 const OvalThree = styled(Oval)`
+  background: aquamarine;
   top: 120px;
   left: 138px;
   animation: OvalThreeAni 2.5s ease infinite;
@@ -296,11 +303,75 @@ const OvalThree = styled(Oval)`
     }
   }
 `;
+const Heading = styled.div`
+  color: cyan;
+  font-size: 3em;
+  font-weight: normal;
+`;
+const StyledHeader = styled.span`
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.2;
+  &&::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: a-ltr-after 4s cubic-bezier(0.77, 0, 0.18, 1) forwards infinite;
+    transform: translateX(-101%);
+    @keyframes a-ltr-after {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(101%);
+      }
+    }
+  }
+  &&::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+    transform: translateX(0);
+    @keyframes a-ltr-before {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(200%);
+      }
+    }
+  }
+  &&:nth-of-type(1)::before {
+    animation-delay: 1s;
+  }
+  &&:nth-of-type(1)::after {
+    animation-delay: 1s;
+  }
+  &&:nth-of-type(2)::before {
+    animation-delay: 1.5s;
+  }
+  &&:nth-of-type(2)::after {
+    animation-delay: 1.5s;
+  }
+`;
 
 const Loader = () => {
   return (
-    <div>
+    <Outer>
       <FirstLoader>
+        <Heading>
+          <StyledHeader>LOADING...</StyledHeader>
+        </Heading>
         <OvalOne></OvalOne>
         <OvalTwo> </OvalTwo>
         <OvalThree></OvalThree>
@@ -313,7 +384,7 @@ const Loader = () => {
           <Box3></Box3>
         </Container>
       </SecondLoader>
-    </div>
+    </Outer>
   );
 };
 

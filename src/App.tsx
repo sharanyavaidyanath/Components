@@ -17,7 +17,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 0;
-  display: grid;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
