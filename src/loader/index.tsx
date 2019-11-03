@@ -239,17 +239,62 @@ const Oval = styled.span`
 const OvalOne = styled(Oval)`
   top: 50px;
   left: 90px;
-  animation: a1 2.5s ease infinite;
+  animation: OvalOneAni 2.5s ease infinite;
+  @keyframes OvalOneAni {
+    0%,
+    100% {
+      top: 50px;
+      left: 90px;
+    }
+    35% {
+      top: 120px;
+      left: 138px;
+    }
+    70% {
+      top: 120px;
+      left: 40px;
+    }
+  }
 `;
 const OvalTwo = styled(Oval)`
   top: 120px;
   left: 40px;
-  animation: a2 2.5s ease infinite;
+  animation: OvalTwoAni 2.5s ease infinite;
+  @keyframes OvalTwoAni {
+    0%,
+    100% {
+      top: 120px;
+      left: 40px;
+    }
+    35% {
+      top: 50px;
+      left: 90px;
+    }
+    70% {
+      top: 120px;
+      left: 138px;
+    }
+  }
 `;
 const OvalThree = styled(Oval)`
   top: 120px;
   left: 138px;
-  animation: a3 2.5s ease infinite;
+  animation: OvalThreeAni 2.5s ease infinite;
+  @keyframes OvalThreeAni {
+    0%,
+    100% {
+      top: 120px;
+      left: 138px;
+    }
+    35% {
+      top: 120px;
+      left: 40px;
+    }
+    70% {
+      top: 50px;
+      left: 90px;
+    }
+  }
 `;
 
 const Loader = () => {
