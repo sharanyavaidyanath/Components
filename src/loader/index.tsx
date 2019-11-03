@@ -228,13 +228,25 @@ const FirstLoader = styled.div`
   height: 200px;
   position: relative;
 `;
+const Oval = styled.span`
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+`;
+const OvalOne = styled(Oval)``;
+const OvalTwo = styled(Oval)``;
+const OvalThree = styled(Oval)``;
+
 const Loader = () => {
   return (
     <div>
       <FirstLoader>
-        <span className="atomic a1"></span>
-        <span className="atomic a2"></span>
-        <span className="atomic a3"></span>
+        <OvalOne></OvalOne>
+        <OvalTwo> </OvalTwo>
+        <OvalThree></OvalThree>
       </FirstLoader>
       <SecondLoader>
         <Text>LOADING...</Text>
