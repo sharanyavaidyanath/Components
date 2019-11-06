@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Outer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 200px;
 `;
 const Container = styled.div`
   width: 112px;
@@ -217,6 +217,9 @@ const Text = styled.h2`
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 3s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 
   @keyframes animate {
     0% {
@@ -320,7 +323,7 @@ const StyledHeader = styled.span`
     right: 0;
     width: 100%;
     height: 100%;
-    background: black;
+    background: white;
     animation: a-ltr-after 4s cubic-bezier(0.77, 0, 0.18, 1) forwards infinite;
     transform: translateX(-101%);
     @keyframes a-ltr-after {
@@ -364,6 +367,77 @@ const StyledHeader = styled.span`
     animation-delay: 1.5s;
   }
 `;
+const ThirdLoader = styled.div`
+  width: 150px;
+  height: 150px;
+  position: relative;
+`;
+const BaseSquare = styled.div`
+  position: absolute;
+  width: 80px;
+  height: 81px;
+  margin: 20px;
+  border-radius: 5%;
+  transform: rotate(45deg);
+  mix-blend-mode: multiply;
+  animation: 2s cubic-bezier(0.66, -0.7, 0.27, 1.6) infinite;
+  border: 1px solid #000;
+`;
+const SquareOne = styled(BaseSquare)`
+  background-color: aqua;
+  animation-name: rotateOne;
+  @keyframes rotateOne {
+    to {
+      transform: rotate(-135deg);
+    }
+  }
+`;
+const SquareTwo = styled(BaseSquare)`
+  background: yellow;
+  animation-name: rotateTwo;
+  @keyframes rotateTwo {
+    to {
+      transform: rotate(225deg);
+    }
+  }
+`;
+const SquareThree = styled(BaseSquare)`
+  background: pink;
+  animation-name: rotateThree;
+  @keyframes rotateThree {
+    to {
+      transform: rotate(-315deg);
+    }
+  }
+`;
+const StyledHeading = styled.h1`
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(30, end) infinite,
+    blink-caret 0.5s step-end infinite;
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+`;
 
 const Loader = () => {
   return (
@@ -384,6 +458,12 @@ const Loader = () => {
           <Box3></Box3>
         </Container>
       </SecondLoader>
+      <ThirdLoader>
+        <StyledHeading>LOADING</StyledHeading>
+        <SquareOne></SquareOne>
+        <SquareTwo></SquareTwo>
+        <SquareThree></SquareThree>
+      </ThirdLoader>
     </Outer>
   );
 };

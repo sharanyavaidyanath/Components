@@ -13,7 +13,7 @@ import Loader from "./loader";
 
 const Container = styled.div`
   background-image: url("/images/CN.jpg");
-  background: black;
+  background: white;
   width: 100vw;
   height: 100vh;
   padding: 0;
