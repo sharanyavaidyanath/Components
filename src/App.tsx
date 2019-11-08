@@ -1,15 +1,10 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
-import CardComponent from "./card";
-import FlipCard from "./flipcard";
-import TorchEffect from "./torcheffect";
-import VideoHighlight from "./video-highlight";
-import { VIDEO_HIGHLIGHT_LIST } from "./utils/constants";
-import PriceTierList from "./price-tiers";
-import { PLANS_DATA } from "../src/utils/constants";
-import DarkContainer from "./wave-dark-container";
+
 import Loader from "./loader";
+import ComponentCreator from "./component-creator";
+import ProfilePage from "./profile-page";
 
 const Container = styled.div`
   background-image: url("/images/CN.jpg");
@@ -31,7 +26,7 @@ const ContainerWithHorizontalSpace = styled.div`
 const App: React.FC = () => {
   return (
     <Container className="App">
-      <Loader />
+      <ProfilePage />
     </Container>
   );
 };

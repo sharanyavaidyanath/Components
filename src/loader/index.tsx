@@ -411,7 +411,7 @@ const SquareThree = styled(BaseSquare)`
   }
 `;
 const StyledHeading = styled.h1`
-  color: black;
+  color: teal;
   font-family: monospace;
   overflow: hidden;
   border-right: 0.15em solid orange;
