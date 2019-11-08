@@ -1,9 +1,6 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
-
-import Loader from "./loader";
-import ComponentCreator from "./component-creator";
 import ProfilePage from "./profile-page";
 
 const Container = styled.div`
@@ -13,7 +10,7 @@ const Container = styled.div`
   height: 100vh;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
 `;
