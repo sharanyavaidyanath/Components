@@ -4,7 +4,6 @@ import styled from "styled-components";
 import ProfilePage from "./profile-page";
 
 const Container = styled.div`
-  background-image: url("/images/CN.jpg");
   background: white;
   width: 100vw;
   height: 100vh;
@@ -15,15 +14,15 @@ const Container = styled.div`
   font-family: "Courier New", Courier, monospace;
 `;
 
-const ContainerWithHorizontalSpace = styled.div`
-  display: grid;
-  row-gap: 80px;
-`;
+// const ContainerWithHorizontalSpace = styled.div`
+//   display: grid;
+//   row-gap: 80px;
+// `;
 
 const App: React.FC = () => {
   return (
     <Container className="App">
-      <ProfilePage />
+      <ProfilePage></ProfilePage>
     </Container>
   );
 };
