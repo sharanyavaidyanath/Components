@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import profileLogo from "../images/SVS.png";
 import twitter from "../images/twitter.png";
 import facebook from "../images/facebook.png";
 import linkedIn from "../images/linkedin.png";
 
 const OuterContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: #333;
-  overflow: hidden;
 `;
 const CenterBorder = styled.div`
   display: block;
@@ -32,7 +32,7 @@ const CenterBorder = styled.div`
     }
   }
 
-  &&::before {
+  &::before {
     display: block;
     width: 120px;
     height: 120px;
@@ -44,7 +44,7 @@ const CenterBorder = styled.div`
     left: -4px;
     transform: rotate(30deg);
   }
-  &&::after {
+  &::after {
     display: block;
     width: 120px;
     height: 120px;
@@ -73,13 +73,14 @@ const LogoContainer = styled.div`
   height: 150px;
   margin: auto;
 `;
-const Name = styled.div`
+const Name = styled(Link)`
   text-align: center;
   position: relative;
   top: 45%;
   transform: translateY(-50%);
   margin: 0 auto;
   width: 320px;
+  text-decoration: none;
   &&:hover .shape {
     stroke-width: 2px;
     stroke-dashoffset: 0;
@@ -113,34 +114,27 @@ const SocialMedia = styled.div`
   margin-top: 180px;
   grid-column-gap: 10px;
 `;
-const Twitter = styled.img`
+const SocialImage = styled.img`
   height: 25px;
+  &:hover {
+    height: 30px;
+  }
 `;
-const Facebook = styled.img`
-  height: 25px;
-`;
-const LinkedIn = styled.img`
-  height: 25px;
-`;
-const TwitterLink = styled.a`
-  cursor: pointer;
-`;
-const FacebookLink = styled.a`
-  cursor: pointer;
-`;
-const LinkedInLink = styled.a`
+
+const SocialLink = styled.a`
   cursor: pointer;
 `;
 
-const ProfilePage = () => {
+const ProfilePage = ({ name = "SHARANYA" }: { name?: string }) => {
   return (
     <OuterContainer>
-      <Name>
-        <Text className="text">SHARANYA</Text>
+      <Name to="/profile">
+        <Text className="text">{name} </Text>
         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
           <Rect className="shape" height="60" width="320" />
         </svg>
       </Name>
+
       <LogoContainer>
         <CenterBorder>
           <StyledLinkOne>
@@ -149,15 +143,15 @@ const ProfilePage = () => {
         </CenterBorder>
       </LogoContainer>
       <SocialMedia>
-        <TwitterLink href="https://twitter.com" target="_blank">
-          <Twitter src={twitter}></Twitter>
-        </TwitterLink>
-        <FacebookLink href="https://facebook.com" target="_blank">
-          <Facebook src={facebook}></Facebook>
-        </FacebookLink>
-        <LinkedInLink href="https://linkedin.com" target="_blank">
-          <LinkedIn src={linkedIn}></LinkedIn>
-        </LinkedInLink>
+        <SocialLink href="https://twitter.com" target="_blank">
+          <SocialImage src={twitter}></SocialImage>
+        </SocialLink>
+        <SocialLink href="https://facebook.com" target="_blank">
+          <SocialImage src={facebook}></SocialImage>
+        </SocialLink>
+        <SocialLink href="https://linkedin.com" target="_blank">
+          <SocialImage src={linkedIn}></SocialImage>
+        </SocialLink>
       </SocialMedia>
     </OuterContainer>
   );
